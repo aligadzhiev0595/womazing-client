@@ -1,0 +1,47 @@
+.wrapperTitle {
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.wrapperImg {
+  width: 100%;
+}
+
+.wrapperItemCard {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.wrapperBtn {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  display: block;
+  margin: 20px auto;
+  color: #6e9c9f;
+  border: 1px solid #6e9c9f;
+  background-color: transparent;
+  max-width: 240px;
+  width: 100%;
+  cursor: pointer;
+  height: 65px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #6e9c9f;
+    color: white;
+  }
+}

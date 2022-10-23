@@ -1,0 +1,139 @@
+.hero {
+  padding: 50px 0 100px;
+  .wrapperLeft {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    h1 {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47px;
+      line-height: 110%;
+      letter-spacing: 0.02em;
+      color: var(--secondary-color);
+      padding-top: 90px;
+    }
+    p {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: var(--secondary-color);
+      margin: 45px 0 52px;
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      &:hover {
+        svg {
+          transform: translateY(5px);
+        }
+        .btnS {
+          background-color: rgba(110, 156, 159, 1);
+          color: white;
+        }
+      }
+    }
+    .btnF {
+      width: 67px;
+      height: 67px;
+      background-color: rgba(110, 156, 159, 0.1);
+      border: none;
+      font-size: 28px;
+      color: #6e9c9f;
+      cursor: pointer;
+      transition: all 0.4s ease-in;
+    }
+    .btnS {
+      width: 243px;
+      height: 68px;
+      color: #fff;
+      border: 1px solid #6e9c9f;
+      background-color: rgba(110, 156, 159, 0.7);
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      transition: all 0.4s ease-in;
+    }
+  }
+  .wrapperRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--footer-color);
+    width: 50%;
+    padding: 120px 0 50px 54px;
+    z-index: -2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapperLeft {
+    h1 {
+      font-size: 38px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .wrapperLeft {
+    h1 {
+      font-size: 33px;
+      padding-top: 30px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  .wrapperRight {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapperLeft {
+    h1 {
+      font-size: 23px;
+      padding-top: 0;
+    }
+    p {
+      font-size: 14px;
+    }
+    .btnF {
+      width: 55px;
+      height: 60px;
+    }
+    .btnS {
+      width: 180px;
+      height: 60px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding:0 0 80px;
+  
+    .wrapperRight {
+      display: none;
+    }
+    .wrapperLeft {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1{
+        padding-top: 0;
+      }
+    }
+  }
+}

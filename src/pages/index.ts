@@ -1,0 +1,7 @@
+export { Brands } from './Brands/Brands'
+export { Cart } from './Cart/Cart'
+export { Contacts } from './Contacts/Contacts'
+export { Home } from './Home/Home'
+export { ItemProduct } from './ItemProduct/ItemProduct'
+export { NotFound } from './NotFound/NotFound'
+export { Shop } from './Shop/Shop'

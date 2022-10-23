@@ -1,0 +1,55 @@
+.card {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0 5px;
+}
+.cardImg {
+  width: 100%;
+}
+.inStock{
+  text-align: center;
+  margin-top: 10px;
+}
+.titleCard {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  text-align: center;
+  margin-top: 15px;
+}
+.priceCard {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+  text-align: center;
+  margin-top: 7px;
+}
+.cardLink {
+  position: relative;
+  display: flex;
+  transition: all 1s ease-out;
+  &:hover::before {
+    z-index: 1;
+    content: "→";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(110, 156, 159, 0.64);
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

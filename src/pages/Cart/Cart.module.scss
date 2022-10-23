@@ -1,0 +1,26 @@
+.title {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.wrapperCard {
+  max-width: 550px;
+  display: flex;
+}
+.emptyCart {
+  padding: 100px 0 160px 0;
+  h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    text-align: center;
+  }
+}

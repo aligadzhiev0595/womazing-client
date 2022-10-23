@@ -1,0 +1,63 @@
+.benefits {
+  padding-bottom: 100px;
+}
+.title {
+  margin-bottom: 92px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+// BenefitsCard
+.titleCard {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin: 37px 0 24px 0;
+}
+.descCard {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    text-align: center;
+  }
+}
+@media (max-width: 770px) {
+	.benefits{
+		padding-top: 60px;
+    padding-bottom: 60px;
+	}
+	.title{
+		margin-bottom: 45px;
+		font-size: 25px;
+	}
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .titleCard {
+    text-align: center;
+		font-size: 20px;
+  }
+  .descCard {
+		margin-bottom: 25px;
+		text-align: center;
+		font-size: 14px;
+  }
+}

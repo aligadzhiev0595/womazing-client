@@ -1,0 +1,104 @@
+.title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.wrapperText {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.wrapperForm {
+  margin-top: 120px;
+}
+.wrapperFormTitle {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  margin-bottom: 62px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+  row-gap: 35px;
+}
+.formInput {
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  padding-bottom: 16px;
+  &::placeholder {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+}
+.formMessage {
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  resize: none;
+  padding-bottom: 110px;
+  &::placeholder {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+}
+.formBtn {
+  background-color: var(--primary-accent-color);
+  width: 189px;
+  height: 68px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    text-align: center;
+  }
+  .wrapperText {
+    flex-wrap: wrap;
+  }
+	.wrapperTitle{
+		text-align: center;
+	}
+	.wrapperInfo{
+		margin-bottom: 20px;
+	}
+  .form{
+ margin: 0 auto;
+  }
+.wrapperFormTitle{
+	text-align: center;
+}
+.formInput{
+	width: 100%;
+}
+.formBtn{
+  margin: 0 auto;
+}
+}
