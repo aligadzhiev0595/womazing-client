@@ -1,28 +1,37 @@
 import { Breadcrumbs } from '../../components'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 import s from './ItemProduct.module.scss'
+import { useAppSelector } from '../../redux/redux.hooks'
 
 interface ItemProductProps {
-  items: any
+  // items: any
   onAddToCart: (el: any) => void
   product: any
   setProduct: (el: any) => void
+  color: any
+  setColor: (el: any) => void
+  size: any
+  setSize: (el: any) => void
 }
 export const ItemProduct = ({
-  items,
+  // items,
   onAddToCart,
   product,
   setProduct,
+  size,
+  color,
+  setSize,
+  setColor,
 }: ItemProductProps) => {
   const params = useParams()
   const { pathname } = useLocation()
-  const [size, setSize] = useState('')
-  const [color, setColor] = useState('black')
   const { t } = useTranslation()
+
+  const products = useAppSelector((s) => s.products.productsData)
 
   useEffect(() => {
     axios.get(`http://localhost:8080/shop/${params.id}`).then(({ data }) => {
@@ -32,7 +41,7 @@ export const ItemProduct = ({
     })
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, items])
+  }, [pathname, products])
 
   return (
     <main>

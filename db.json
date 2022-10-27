@@ -423,5 +423,18 @@
       "inStock": 14
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "title": "Harley-Queen",
+      "image": {
+        "black": "Shop/hoody2.jpg",
+        "white": "Shop/hoody2-white.jpg"
+      },
+      "color": "black",
+      "size": "s",
+      "price": 300,
+      "category": "hoody",
+      "id": 1
+    }
+  ]
 }

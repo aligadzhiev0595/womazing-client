@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ShopCard } from '../../components'
 import { Pagination } from '../../components'
 import { Breadcrumbs } from '../../components'
@@ -6,43 +5,48 @@ import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import s from './Shop.module.scss'
+import { useAppSelector } from '../../redux/redux.hooks'
 
 interface ShopProps {
-  items: any
+  // items: any
   loading: any
   page: any
   setPage: (el: any) => void
   status: any
   setStatus: (el: any) => void
+  sort:any
+  setSort:(el:any) => void
 }
 export const Shop = ({
-  items,
+  // items,
   loading,
   page,
   setPage,
   status,
   setStatus,
+  sort,
+  setSort
 }: ShopProps) => {
   const { t } = useTranslation()
+  const products = useAppSelector(s => s.products.productsData)
 
-  const [sort, setSort] = useState('')
   const { pathname } = useLocation()
 
-  const showCount = items
-      .filter((item: any) =>
+  const showCount = products
+      .filter((item) =>
         status === 'all' ? item : item.category === status
       )
-      .filter((el: any) => (sort === 'discount' ? el.priceSale : el))
-      .filter((item: any, idx: any) => {
+      .filter((el) => (sort === 'discount' ? el.priceSale : el))
+      .filter((item, idx) => {
         return idx + 1 <= page * 6 && idx >= page * 6 - 6
       }).length,
-    showCountsLength = items
-      .filter((item: any) =>
+    showCountsLength = products
+      .filter((item) =>
         status === 'all' ? item : item.category === status
       )
-      .filter((el: any) => (sort === 'discount' ? el.priceSale : el)).length
+      .filter((el) => (sort === 'discount' ? el.priceSale : el)).length
 
-  const paginate = (el: any) => setPage(el)
+  const paginate = (el:number) => setPage(el)
   const nextPage = () => setPage(page + 1)
   const prevPage = () => setPage(page - 1)
 
@@ -182,19 +186,19 @@ export const Shop = ({
             <span>{t(`shop.view2`)}</span>
           </div>
           <div className='row'>
-            {items
-              .sort((a: any, b: any) => {
-                if (sort === 'big') {
-                  return (b.priceSale || b.price) - (a.priceSale || a.price)
-                } else if (sort === 'less') {
-                  return (a.priceSale || a.price) - (b.priceSale || b.price)
-                }
-              })
-              .filter((el: any) => (sort === 'discount' ? el.priceSale : el))
-              .filter((item: any) =>
+            {products
+              // .sort((a: number, b: number) => {
+              //   if (sort === 'big') {
+              //     return (b.priceSale || b.price) - (a.priceSale || a.price)
+              //   } else if (sort === 'less') {
+              //     return (a.priceSale || a.price) - (b.priceSale || b.price)
+              //   }
+              // })
+              .filter((el) => (sort === 'discount' ? el.priceSale : el))
+              .filter((item) =>
                 status === 'all' ? item : item.category === status
               )
-              .filter((item: any, idx: any) => {
+              .filter((item, idx) => {
                 return idx + 1 <= page * 6 && idx >= page * 6 - 6
               })
               .map((el: any) => (
@@ -206,7 +210,7 @@ export const Shop = ({
               ))}
           </div>
           <Pagination
-            totalItems={items.length}
+            totalItems={products.length}
             paginate={paginate}
             nextPage={nextPage}
             prevPage={prevPage}
