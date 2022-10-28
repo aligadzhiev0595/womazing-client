@@ -6,26 +6,12 @@
       "price": 415,
       "priceSale": 200,
       "image": {
-        "black": "Shop/hoody1.jpg",
-        "red": "Shop/hoody1-red.jpg",
-        "white": "Shop/hoody1-white.jpg",
-        "blue": "Shop/hoody1-blue.jpg"
+        "black": "Shop/hoody1-black.jpg",
+        "white": "Shop/hoody1-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl",
-        "xxl",
-        "xs"
-      ],
-      "colors": [
-        "red",
-        "blue",
-        "white",
-        "black"
-      ],
+      "size": ["s", "m", "l", "xl", "xxl", "xs"],
+      "colors": ["white", "black"],
       "inStock": 15
     },
     {
@@ -34,19 +20,12 @@
       "price": 400,
       "priceSale": 300,
       "image": {
-        "black": "Shop/hoody2.jpg",
+        "black": "Shop/hoody2-black.jpg",
         "white": "Shop/hoody2-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 21
     },
     {
@@ -55,22 +34,12 @@
       "price": 519,
       "priceSale": 400,
       "image": {
-        "black": "Shop/hoody3.jpg",
-        "white": "Shop/hoody3-white.jpg",
-        "grey": "Shop/hoody3-grey.jpg"
+        "black": "Shop/hoody3-black.jpg",
+        "white": "Shop/hoody3-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "white",
-        "black",
-        "grey"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["white", "black"],
       "inStock": 23
     },
     {
@@ -78,23 +47,12 @@
       "title": "Wendy",
       "price": 75,
       "image": {
-        "black": "Shop/hoody4.jpg",
-        "white": "Shop/hoody4-white.jpg",
-        "red": "Shop/hoody4-red.jpg",
-        "grey": "Shop/hoody4-grey.jpg"
+        "black": "Shop/hoody4-black.jpg",
+        "white": "Shop/hoody4-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "red",
-        "grey",
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 25,
       "priceSale": ""
     },
@@ -103,22 +61,12 @@
       "title": "Rick&Morty",
       "price": 339,
       "image": {
-        "black": "Shop/hoody5.jpg",
-        "white": "Shop/hoody5-white.jpg",
-        "grey": "Shop/hoody5-grey.jpg"
+        "black": "Shop/hoody5-black.jpg",
+        "white": "Shop/hoody5-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "white",
-        "black",
-        "grey"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["white", "black"],
       "inStock": 10
     },
     {
@@ -127,28 +75,11 @@
       "price": 279,
       "image": {
         "black": "Shop/sportsuit1-black.jpg",
-        "white": "Shop/sportsuit1-white.jpg",
-        "red": "Shop/sportsuit1-red.jpg",
-        "pink": "Shop/sportsuit1-pink.jpg",
-        "grey": "Shop/sportsuit1-grey.jpg",
-        "beige": "Shop/sportsuit1-beige.jpg",
-        "blue": "Shop/sportsuit1.jpg"
+        "white": "Shop/sportsuit1-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "beige",
-        "black",
-        "white",
-        "red",
-        "blue",
-        "pink",
-        "grey"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 33,
       "priceSale": 0
     },
@@ -157,59 +88,39 @@
       "title": "STAMINA2",
       "price": 279,
       "image": {
-        "black": "Shop/sportsuit2.jpg",
-        "white": "Shop/sportsuit2-white.jpg",
-        "red": "Shop/sportsuit2-red.jpg",
-        "pink": "Shop/sportsuit2-pink.jpg",
-        "grey": "Shop/sportsuit2-grey.jpg",
-        "beige": "Shop/sportsuit2-almond.jpg",
-        "blue": "Shop/sportsuit2-blue.jpg"
+        "black": "Shop/sportsuit2-black.jpg",
+        "white": "Shop/sportsuit2-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "beige",
-        "black",
-        "white",
-        "red",
-        "blue",
-        "pink",
-        "grey"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["white", "black"],
       "inStock": 12
     },
     {
       "id": 8,
-      "title": "Milk",
-      "price": 229,
+      "title": "STAMINA3",
+      "price": 280,
       "image": {
-        "blue": "Shop/sportsuit3-blue.jpg",
-        "white": "Shop/sportsuit3.jpg",
-        "red": "Shop/sportsuit3-red.jpg",
-        "pink": "Shop/sportsuit3-pink.jpg",
-        "grey": "Shop/sportsuit3-grey.jpg",
-        "beige": "Shop/sportsuit3-beige.jpg"
+        "black": "Shop/sportsuit5-black.jpg",
+        "white": "Shop/sportsuit5-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "beige",
-        "blue",
-        "white",
-        "red",
-        "pink",
-        "grey"
-      ],
-      "inStock": 9
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["white", "black"],
+      "inStock": 19
+    },
+    {
+      "id": 9,
+      "title": "STAMINA4",
+      "price": 280,
+      "image": {
+        "black": "Shop/sportsuit4-black.jpg",
+        "white": "Shop/sportsuit4-white.jpg"
+      },
+      "category": "sportsuit",
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["white", "black"],
+      "inStock": 4
     },
     {
       "id": 11,
@@ -217,47 +128,50 @@
       "price": 300,
       "image": {
         "white": "Shop/sweatshirt5-white.jpg",
-        "red": "Shop/sweatshirt5-red.jpg",
-        "black": "Shop/sweatshirt5.jpg",
-        "grey": "Shop/sweatshirt5-grey.jpg"
+        "black": "Shop/sweatshirt5-black.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "grey",
-        "red",
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 45
     },
     {
-      "id": 12,
-      "title": "Dragon",
-      "price": 200,
+      "id": 13,
+      "title": "Rabbyt-NOM-NOM",
+      "price": 300,
       "image": {
-        "black": "Shop/sweatshirt4-black.jpg",
-        "white": "Shop/sweatshirt4-white.jpg",
-        "red": "Shop/sweatshirt4-red.jpg",
-        "grey": "Shop/sweatshirt4-grey.jpg"
+        "white": "Shop/sweatshirt3-white.jpg",
+        "black": "Shop/sweatshirt3-black.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "grey",
-        "black",
-        "white",
-        "red"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
+      "inStock": 88
+    },
+    {
+      "id": 14,
+      "title": "Cat-loop",
+      "price": 300,
+      "image": {
+        "white": "Shop/sweatshirt2-white.jpg",
+        "black": "Shop/sweatshirt2-black.jpg"
+      },
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
+      "inStock": 43
+    },
+    {
+      "id": 15,
+      "title": "Euphoria",
+      "price": 200,
+      "image": {
+        "white": "Shop/sweatshirt1-white.jpg",
+        "black": "Shop/sweatshirt1-black.jpg"
+      },
+      "category": "sweatshirt",
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 52
     },
     {
@@ -265,176 +179,29 @@
       "title": "Mona",
       "price": 540,
       "image": {
-        "orange": "Shop/tshort1-orange.jpg",
-        "black": "Shop/tshort1.jpg",
-        "beige": "Shop/tshort1-beige.jpg",
-        "blue": "Shop/tshort1-blue.jpg",
-        "brown": "Shop/tshort1-brown.jpg",
-        "grey": "Shop/tshort1-grey.jpg",
-        "pink": "Shop/tshort1-pink.jpg",
-        "red": "Shop/tshort1-red.jpg",
+        "black": "Shop/tshort1-black.jpg",
         "white": "Shop/tshort1-white.jpg"
       },
       "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "pink",
-        "black",
-        "brown",
-        "beige",
-        "red",
-        "orange",
-        "white",
-        "blue",
-        "grey"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["white", "black"],
       "inStock": 27
-    },
-    {
-      "id": 17,
-      "title": "girl",
-      "price": 520,
-      "image": {
-        "pink": "Shop/tshort2-pink.jpg",
-        "brown": "Shop/tshort2-brown.jpg",
-        "grey": "Shop/tshort2-grey.jpg",
-        "beige": "Shop/tshort2-beige.jpg",
-        "red": "Shop/tshort2-red.jpg",
-        "white": "Shop/tshort2.jpg"
-      },
-      "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "pink",
-        "brown",
-        "beige",
-        "red",
-        "white",
-        "grey"
-      ],
-      "inStock": 31,
-      "priceSale": 416
     },
     {
       "id": 18,
       "title": "Japan",
       "price": 350,
       "image": {
-        "beige": "Shop/tshort3-beige.jpg",
         "black": "Shop/tshort3-black.jpg",
-        "blue": "Shop/tshort3-blue.jpg",
-        "brown": "Shop/tshort3-brown.jpg",
-        "grey": "Shop/tshort3-grey.jpg",
-        "orange": "Shop/tshort3-orange.jpg",
-        "pink": "Shop/tshort3-pink.jpg",
-        "red": "Shop/tshort3-red.jpg",
-        "white": "Shop/tshort3.jpg"
+        "white": "Shop/tshort3-white.jpg"
       },
       "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "pink",
-        "black",
-        "brown",
-        "beige",
-        "red",
-        "orange",
-        "white",
-        "blue",
-        "grey"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["white", "black"],
       "inStock": 20,
       "priceSale": 350
-    },
-    {
-      "id": 19,
-      "title": "hippo",
-      "price": 490,
-      "image": {
-        "beige": "Shop/tshort4-beige.jpg",
-        "blue": "Shop/tshort4-blue.jpg",
-        "brown": "Shop/tshort4.jpg",
-        "grey": "Shop/tshort4-grey.jpg",
-        "orange": "Shop/tshort4-orange.jpg",
-        "pink": "Shop/tshort4-pink.jpg"
-      },
-      "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "pink",
-        "brown",
-        "beige",
-        "orange",
-        "blue",
-        "grey"
-      ],
-      "inStock": 19
-    },
-    {
-      "id": 20,
-      "title": "killua",
-      "price": 500,
-      "image": {
-        "white": "Shop/tshort5.jpg",
-        "beige": "Shop/tshort5-beige.jpg",
-        "blue": "Shop/tshort5-blue.jpg",
-        "brown": "Shop/tshort5-brown.jpg",
-        "grey": "Shop/tshort5-grey.jpg",
-        "orange": "Shop/tshort5-orange.jpg",
-        "pink": "Shop/tshort5-pink.jpg",
-        "red": "Shop/tshort5-red.jpg",
-        "black": "Shop/tshort5.jpg"
-      },
-      "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "pink",
-        "black",
-        "brown",
-        "beige",
-        "red",
-        "orange",
-        "white",
-        "blue",
-        "grey"
-      ],
-      "inStock": 14
     }
+
   ],
-  "cart": [
-    {
-      "title": "Harley-Queen",
-      "image": {
-        "black": "Shop/hoody2.jpg",
-        "white": "Shop/hoody2-white.jpg"
-      },
-      "color": "black",
-      "size": "s",
-      "price": 300,
-      "category": "hoody",
-      "id": 1
-    }
-  ]
+  "cart": []
 }

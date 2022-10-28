@@ -6,6 +6,8 @@ import { Breadcrumbs } from '../../components'
 import { useLocation } from 'react-router-dom'
 
 export const Cart = ({ cart, removeCart }: any) => {
+  // console.log(cart);
+  
   const { t } = useTranslation()
   const { pathname } = useLocation()
   return (

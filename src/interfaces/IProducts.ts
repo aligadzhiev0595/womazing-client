@@ -8,13 +8,13 @@ export interface IProducts {
   colors: string[]
   size: string[]
   image: {
-    black?: string
-    red?: string
-    white?: string
-    blue?: string
+    black: string
+    white: string
   }
+  // image: {
+  //   [key: string]: string
+  // }
 }
-
 // export interface ICart {
 //   category: string
 //   color: string

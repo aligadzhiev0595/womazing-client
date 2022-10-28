@@ -1,53 +1,51 @@
 import { Breadcrumbs } from '../../components'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 import s from './ItemProduct.module.scss'
-import { useAppSelector } from '../../redux/redux.hooks'
+import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
+import { getColor, getSize } from '../../redux/productsSlice'
+import { IProducts } from '../../interfaces/IProducts'
 
 interface ItemProductProps {
-  // items: any
   onAddToCart: (el: any) => void
-  product: any
-  setProduct: (el: any) => void
-  color: any
-  setColor: (el: any) => void
-  size: any
-  setSize: (el: any) => void
 }
-export const ItemProduct = ({
-  // items,
-  onAddToCart,
-  product,
-  setProduct,
-  size,
-  color,
-  setSize,
-  setColor,
-}: ItemProductProps) => {
+export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
   const params = useParams()
   const { pathname } = useLocation()
   const { t } = useTranslation()
+  const dispatch = useAppDispatch()
 
-  const products = useAppSelector((s) => s.products.productsData)
+  const [product, setProduct] = useState<IProducts>()
 
+  const color = useAppSelector((s) => s.products.color)
+  const size = useAppSelector((s) => s.products.size)
   useEffect(() => {
-    axios.get(`http://localhost:8080/shop/${params.id}`).then(({ data }) => {
-      setProduct(data)
-      setColor(data.colors[0])
-      setSize(data.size[0])
-    })
+    const fetchProduct = async () => {
+      try {
+        const { data } = await axios.get(
+          `http://localhost:8080/shop/${params.id}`
+        )
+        // dispatch(getProduct(data))
+        setProduct(data)
+        dispatch(getColor(data.colors[0]))
+        dispatch(getSize(data.size[0]))
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchProduct()
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, products])
+  }, [])
 
   return (
     <main>
       <section className={s.itemProduct}>
         <div className='container'>
-          {product.title && (
+          {product && (
             <>
               <h2 className={s.title}>{product.title}</h2>
               <Breadcrumbs
@@ -91,7 +89,7 @@ export const ItemProduct = ({
                         {product.size.map((el: any) => (
                           <li
                             key={el}
-                            onClick={() => setSize(el)}
+                            onClick={() => dispatch(getSize(el))}
                             className={[
                               s.chooseSizeItem,
                               el === size ? s.active : '',
@@ -108,7 +106,7 @@ export const ItemProduct = ({
                         {product.colors.map((el: any) => (
                           <li
                             key={el}
-                            onClick={() => setColor(el)}
+                            onClick={() => dispatch(getColor(el))}
                             style={{
                               background: el,
                               border: '1px solid grey',
@@ -135,11 +133,11 @@ export const ItemProduct = ({
                         className='mt-40 d-flex j-center a-center'
                         onClick={() =>
                           onAddToCart({
-                            // id: product.id,
+                            id: product.id,
                             title: product.title,
                             image: product.image,
-                            color,
-                            size,
+                            color: product.colors,
+                            size: product.size,
                             price: product.priceSale || product.price,
                             category: product.category,
                           })

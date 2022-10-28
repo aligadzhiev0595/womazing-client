@@ -1,58 +1,25 @@
 import { ShopCard } from '../../components'
-import { Pagination } from '../../components'
 import { Breadcrumbs } from '../../components'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import s from './Shop.module.scss'
-import { useAppSelector } from '../../redux/redux.hooks'
+import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
+import { getStatus } from '../../redux/productsSlice'
 
 interface ShopProps {
-  // items: any
-  loading: any
-  page: any
-  setPage: (el: any) => void
-  status: any
-  setStatus: (el: any) => void
-  sort:any
-  setSort:(el:any) => void
+  sort: any
+  setSort: (el: any) => void
 }
 export const Shop = ({
-  // items,
-  loading,
-  page,
-  setPage,
-  status,
-  setStatus,
   sort,
-  setSort
+  setSort,
 }: ShopProps) => {
   const { t } = useTranslation()
-  const products = useAppSelector(s => s.products.productsData)
-
+  const products = useAppSelector((s) => s.products.productsData)
+  const status = useAppSelector((s) => s.products.status)
+  const dispatch = useAppDispatch()
   const { pathname } = useLocation()
-
-  const showCount = products
-      .filter((item) =>
-        status === 'all' ? item : item.category === status
-      )
-      .filter((el) => (sort === 'discount' ? el.priceSale : el))
-      .filter((item, idx) => {
-        return idx + 1 <= page * 6 && idx >= page * 6 - 6
-      }).length,
-    showCountsLength = products
-      .filter((item) =>
-        status === 'all' ? item : item.category === status
-      )
-      .filter((el) => (sort === 'discount' ? el.priceSale : el)).length
-
-  const paginate = (el:number) => setPage(el)
-  const nextPage = () => setPage(page + 1)
-  const prevPage = () => setPage(page - 1)
-
-  if (loading) {
-    return <h2>LOADING...</h2>
-  }
 
   return (
     <main>
@@ -68,7 +35,7 @@ export const Shop = ({
               className={[s.tabsItem, status === 'all' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => setStatus('all')}
+              onClick={() => dispatch(getStatus('all'))}
             >
               {t('shop.all')}
             </li>
@@ -77,7 +44,7 @@ export const Shop = ({
                 s.tabsItem,
                 status === 'sportsuit' ? s.active : '',
               ].join(' ')}
-              onClick={() => setStatus('sportsuit')}
+              onClick={() => dispatch(getStatus('sportsuit'))}
             >
               {t('shop.suit')}
             </li>
@@ -86,7 +53,7 @@ export const Shop = ({
                 s.tabsItem,
                 status === 'sweatshirt' ? s.active : '',
               ].join(' ')}
-              onClick={() => setStatus('sweatshirt')}
+              onClick={() => dispatch(getStatus('sweatshirt'))}
             >
               {t('shop.sweatshirt')}
             </li>
@@ -94,7 +61,7 @@ export const Shop = ({
               className={[s.tabsItem, status === 'tshort' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => setStatus('tshort')}
+              onClick={() => dispatch(getStatus('tshort'))}
             >
               {t('shop.tshort')}
             </li>
@@ -102,7 +69,7 @@ export const Shop = ({
               className={[s.tabsItem, status === 'hoody' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => setStatus('hoody')}
+              onClick={() => dispatch(getStatus('hoody'))}
             >
               {t('shop.hoody')}
             </li>
@@ -111,8 +78,7 @@ export const Shop = ({
             <select
               className={s.selectTabs}
               onChange={(e) => {
-                setStatus(e.target.value)
-                setPage(1)
+                dispatch(getStatus(e.target.value))
               }}
             >
               <option defaultValue='all' value='all'>
@@ -179,12 +145,6 @@ export const Shop = ({
               </button>
             </div>
           </div>
-          <div className={s.countItems}>
-            <span>{t(`shop.view`)}</span> <span>{`${showCount}`}</span>{' '}
-            <span>{t(`shop.view1`)}</span>
-            <span>{`${showCountsLength}`}</span>
-            <span>{t(`shop.view2`)}</span>
-          </div>
           <div className='row'>
             {products
               // .sort((a: number, b: number) => {
@@ -198,9 +158,6 @@ export const Shop = ({
               .filter((item) =>
                 status === 'all' ? item : item.category === status
               )
-              .filter((item, idx) => {
-                return idx + 1 <= page * 6 && idx >= page * 6 - 6
-              })
               .map((el: any) => (
                 <ShopCard
                   img={`../${el.image[Object.keys(el.image)[0]]}`}
@@ -209,12 +166,6 @@ export const Shop = ({
                 />
               ))}
           </div>
-          <Pagination
-            totalItems={products.length}
-            paginate={paginate}
-            nextPage={nextPage}
-            prevPage={prevPage}
-          />
         </div>
       </section>
     </main>

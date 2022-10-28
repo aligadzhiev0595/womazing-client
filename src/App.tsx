@@ -14,26 +14,22 @@ import { useAppDispatch } from './redux/redux.hooks'
 import { getAllProducts } from './redux/productsSlice'
 
 export const App = () => {
-  // const [items, setItems] = useState<any>([])
-  const [loading, setLoading] = useState<any>(false)
-  const [page, setPage] = useState<any>(1)
-  const [status, setStatus] = useState<any>('all')
-  const [product, setProduct] = useState<any>([])
+  // const [product, setProduct] = useState<any>([])
   const [cart, setCart] = useState<any>([])
-  const [size, setSize] = useState('')
-  const [color, setColor] = useState('black')
   const [sort, setSort] = useState('')
 
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    const fetchItems = async () => {
-      setLoading(true)
-      const res = await axios.get('http://localhost:8080/shop/')
-      dispatch(getAllProducts(res.data))
-      setLoading(false)
+    const fetchProducts = async () => {
+      try {
+        const { data } = await axios.get('http://localhost:8080/shop/')
+        dispatch(getAllProducts(data))
+      } catch (error) {
+        console.log(error)
+      }
     }
-    fetchItems()
+    fetchProducts()
   }, [dispatch])
 
   const onAddToCart = async (obj: any) => {
@@ -59,33 +55,14 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route path='' element={<Home />} />
-          <Route
-            path='shop'
-            element={
-              <Shop
-                // items={items}
-                loading={loading}
-                page={page}
-                setPage={setPage}
-                setStatus={setStatus}
-                status={status}
-                sort={sort}
-                setSort={setSort}
-              />
-            }
-          />
+          <Route path='shop' element={<Shop sort={sort} setSort={setSort} />} />
           <Route
             path='shop/:id'
             element={
               <ItemProduct
-                // items={items}
                 onAddToCart={onAddToCart}
-                product={product}
-                setProduct={setProduct}
-                setColor={setColor}
-                setSize={setSize}
-                size={size}
-                color={color}
+                // product={product}
+                // setProduct={setProduct}
               />
             }
           />
