@@ -31,9 +31,13 @@ const productsSlice = createSlice({
     getSize(state: InitialStateProps, action: PayloadAction<string>) {
       state.size = action.payload
     },
-    getColor(state: InitialStateProps, action: PayloadAction<'black' | 'white'>) {
+    getColor(
+      state: InitialStateProps,
+      action: PayloadAction<'black' | 'white'>
+    ) {
       state.color = action.payload
     },
+  
   },
 })
 

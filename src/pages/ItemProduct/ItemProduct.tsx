@@ -1,5 +1,5 @@
 import { Breadcrumbs } from '../../components'
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
@@ -28,7 +28,6 @@ export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
         const { data } = await axios.get(
           `http://localhost:8080/shop/${params.id}`
         )
-        // dispatch(getProduct(data))
         setProduct(data)
         dispatch(getColor(data.colors[0]))
         dispatch(getSize(data.size[0]))
@@ -133,11 +132,11 @@ export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
                         className='mt-40 d-flex j-center a-center'
                         onClick={() =>
                           onAddToCart({
-                            id: product.id,
-                            title: product.title,
+                            // id: product.id,
+                            title:product.title,
                             image: product.image,
-                            color: product.colors,
-                            size: product.size,
+                            color,
+                            size,
                             price: product.priceSale || product.price,
                             category: product.category,
                           })

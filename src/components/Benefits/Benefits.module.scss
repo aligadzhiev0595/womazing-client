@@ -13,6 +13,9 @@
 }
 
 // BenefitsCard
+.wrapperCard{
+  margin: 0 10px;
+}
 .titleCard {
   font-family: "Raleway";
   font-style: normal;
@@ -31,11 +34,16 @@
   line-height: 140%;
   letter-spacing: 0.02em;
   color: #000000;
+  width: 90%;
 }
 
 @media (max-width: 1024px) {
   .title {
     text-align: center;
+  }
+  .descCard {
+		text-align: left;
+    width: 100%;
   }
 }
 @media (max-width: 770px) {

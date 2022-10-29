@@ -14,7 +14,6 @@ import { useAppDispatch } from './redux/redux.hooks'
 import { getAllProducts } from './redux/productsSlice'
 
 export const App = () => {
-  // const [product, setProduct] = useState<any>([])
   const [cart, setCart] = useState<any>([])
   const [sort, setSort] = useState('')
 
@@ -61,8 +60,6 @@ export const App = () => {
             element={
               <ItemProduct
                 onAddToCart={onAddToCart}
-                // product={product}
-                // setProduct={setProduct}
               />
             }
           />
