@@ -5,19 +5,13 @@ import { useTranslation } from 'react-i18next'
 
 import s from './Shop.module.scss'
 import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
-import { getStatus } from '../../redux/productsSlice'
+import { getSorting, getStatus } from '../../redux/productsSlice'
 
-interface ShopProps {
-  sort: any
-  setSort: (el: any) => void
-}
-export const Shop = ({
-  sort,
-  setSort,
-}: ShopProps) => {
+export const Shop = () => {
   const { t } = useTranslation()
   const products = useAppSelector((s) => s.products.productsData)
   const status = useAppSelector((s) => s.products.status)
+  const sorting = useAppSelector((s) => s.products.sorting)
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
 
@@ -93,24 +87,32 @@ export const Shop = ({
               <select
                 className={s.selectTabs}
                 onChange={(e) => {
-                  setSort(e.target.value)
+                  dispatch(getSorting(e.target.value))
                 }}
               >
                 <option
                   value='big'
-                  onClick={() => setSort('big' !== sort ? 'big' : '')}
+                  onClick={() =>
+                    dispatch(getSorting('big' !== sorting ? 'big' : ''))
+                  }
                 >
                   {t('shop.big')}
                 </option>
                 <option
                   value='less'
-                  onClick={() => setSort('less' !== sort ? 'less' : '')}
+                  onClick={() =>
+                    dispatch(getSorting('less' !== sorting ? 'less' : ''))
+                  }
                 >
                   {t('shop.less')}
                 </option>
                 <option
                   value='discount'
-                  onClick={() => setSort('discount' !== sort ? 'discount' : '')}
+                  onClick={() =>
+                    dispatch(
+                      getSorting('discount' !== sorting ? 'discount' : '')
+                    )
+                  }
                 >
                   {t('shop.discount')}
                 </option>
@@ -119,27 +121,33 @@ export const Shop = ({
             <div className={s.innerBtn}>
               <p>{t('shop.sortTitle')}</p>
               <button
-                className={[s.btnSort, sort === 'big' ? s.active : ''].join(
+                className={[s.btnSort, sorting === 'big' ? s.active : ''].join(
                   ' '
                 )}
-                onClick={() => setSort('big' !== sort ? 'big' : '')}
+                onClick={() =>
+                  dispatch(getSorting('big' !== sorting ? 'big' : ''))
+                }
               >
                 {t('shop.big')}
               </button>
               <button
-                className={[s.btnSort, sort === 'less' ? s.active : ''].join(
+                className={[s.btnSort, sorting === 'less' ? s.active : ''].join(
                   ' '
                 )}
-                onClick={() => setSort('less' !== sort ? 'less' : '')}
+                onClick={() =>
+                  dispatch(getSorting('less' !== sorting ? 'less' : ''))
+                }
               >
                 {t('shop.less')}
               </button>
               <button
                 className={[
                   s.btnSort,
-                  sort === 'discount' ? s.active : '',
+                  sorting === 'discount' ? s.active : '',
                 ].join(' ')}
-                onClick={() => setSort('discount' !== sort ? 'discount' : '')}
+                onClick={() =>
+                  dispatch(getSorting('discount' !== sorting ? 'discount' : ''))
+                }
               >
                 {t('shop.discount')}
               </button>
@@ -147,14 +155,20 @@ export const Shop = ({
           </div>
           <div className='row'>
             {products
-              // .sort((a: number, b: number) => {
-              //   if (sort === 'big') {
-              //     return (b.priceSale || b.price) - (a.priceSale || a.price)
-              //   } else if (sort === 'less') {
-              //     return (a.priceSale || a.price) - (b.priceSale || b.price)
-              //   }
-              // })
-              .filter((el) => (sort === 'discount' ? el.priceSale : el))
+              .filter((el) => (sorting === 'discount' ? el.priceSale : el))
+              .sort((a, b) => {
+                if (sorting === 'big') {
+                  return (a.priceSale || a.price) > (b.priceSale || b.price)
+                    ? 1
+                    : -1
+                }
+                if (sorting === 'less') {
+                  return (a.priceSale || a.price) < (b.priceSale || b.price)
+                    ? 1
+                    : -1
+                }
+                return 0
+              })
               .filter((item) =>
                 status === 'all' ? item : item.category === status
               )

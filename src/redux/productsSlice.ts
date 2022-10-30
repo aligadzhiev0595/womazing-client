@@ -6,6 +6,7 @@ type InitialStateProps = {
   status: string
   size: string
   color: 'black' | 'white'
+  sorting: string
 }
 
 const initialState: InitialStateProps = {
@@ -13,6 +14,7 @@ const initialState: InitialStateProps = {
   status: 'all',
   size: 's',
   color: 'black',
+  sorting: '',
 }
 
 const productsSlice = createSlice({
@@ -37,11 +39,13 @@ const productsSlice = createSlice({
     ) {
       state.color = action.payload
     },
-  
+    getSorting(state: InitialStateProps, action: PayloadAction<string>) {
+      state.sorting = action.payload
+    },
   },
 })
 
-export const { getAllProducts, getStatus, getSize, getColor } =
+export const { getAllProducts, getStatus, getSize, getColor, getSorting } =
   productsSlice.actions
 
 export default productsSlice.reducer

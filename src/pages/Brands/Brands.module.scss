@@ -57,17 +57,17 @@
   .rowReverse {
     flex-direction: column-reverse;
   }
-}
-
-@media (max-width: 576px) {
-  .title {
-    text-align: center;
-  }
   .subtitle {
     text-align: center;
     margin-top: 20px;
   }
   .desc {
-    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    text-align: center;
   }
 }

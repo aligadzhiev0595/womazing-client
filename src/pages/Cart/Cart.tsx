@@ -4,12 +4,15 @@ import s from './Cart.module.scss'
 import { CartCard } from '../../components'
 import { Breadcrumbs } from '../../components'
 import { useLocation } from 'react-router-dom'
+import { useAppSelector } from '../../redux/redux.hooks'
 
-export const Cart = ({ cart, removeCart }: any) => {
-  // console.log(cart);
-  
+export const Cart = () => {
+  const cartData = useAppSelector((s) => s.cart.cartData)
+  const color = useAppSelector((s) => s.products.color)
+
   const { t } = useTranslation()
   const { pathname } = useLocation()
+
   return (
     <main>
       <section className={s.cart}>
@@ -19,16 +22,10 @@ export const Cart = ({ cart, removeCart }: any) => {
             dangerouslySetInnerHTML={{ __html: t('basket.title') }}
           />
           <Breadcrumbs pathname={pathname} />
-
           <div className='row'>
-            {cart.length > 0 ? (
-              cart.map((el: any, idx: any) => (
-                <CartCard
-                  img={`../${el.image[Object.keys(el.image)[0]]}`}
-                  {...el}
-                  removeCart={removeCart}
-                  key={idx}
-                />
+            {cartData.length > 0 ? (
+              cartData.map((el) => (
+                <CartCard img={`../${el.image[color]}`} {...el} key={el.id} />
               ))
             ) : (
               <div className='col col-12'>

@@ -8,11 +8,10 @@ import s from './ItemProduct.module.scss'
 import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
 import { getColor, getSize } from '../../redux/productsSlice'
 import { IProducts } from '../../interfaces/IProducts'
+import { getProductCart } from '../../redux/cartSlice'
+import { ICart } from '../../interfaces/ICart'
 
-interface ItemProductProps {
-  onAddToCart: (el: any) => void
-}
-export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
+export const ItemProduct = () => {
   const params = useParams()
   const { pathname } = useLocation()
   const { t } = useTranslation()
@@ -39,6 +38,11 @@ export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const onAddToCart = async (obj: ICart) => {
+    const { data } = await axios.post('http://localhost:8080/cart/', obj)
+    dispatch(getProductCart(data))
+  }
 
   return (
     <main>
@@ -132,8 +136,8 @@ export const ItemProduct = ({ onAddToCart }: ItemProductProps) => {
                         className='mt-40 d-flex j-center a-center'
                         onClick={() =>
                           onAddToCart({
-                            // id: product.id,
-                            title:product.title,
+                            id: product.id,
+                            title: product.title,
                             image: product.image,
                             color,
                             size,

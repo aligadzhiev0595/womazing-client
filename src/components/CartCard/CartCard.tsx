@@ -1,6 +1,9 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next'
+import axios from 'axios'
 
-import s from "./CartCard.module.scss";
+import s from './CartCard.module.scss'
+import { useAppDispatch } from '../../redux/redux.hooks'
+import { removeProductCart } from '../../redux/cartSlice'
 
 interface CartCardProps {
   img: string
@@ -9,7 +12,6 @@ interface CartCardProps {
   size: string
   price: number
   id: number
-  removeCart: (id:number) => void
 }
 
 export const CartCard = ({
@@ -18,26 +20,36 @@ export const CartCard = ({
   color,
   size,
   price,
-  removeCart,
   id,
 }: CartCardProps) => {
-	const { t } = useTranslation();
+  const { t } = useTranslation()
+  const dispatch = useAppDispatch()
+  const removeCart = (id: number) => {
+    axios.delete(`http://localhost:8080/cart/${id}`)
+    dispatch(removeProductCart(id))
+  }
   return (
-    <div className="col col-4 col-sm-12">
+    <div className='col col-4 col-sm-12'>
       <div className={s.wrapper}>
-			<h4 className={s.wrapperTitle}>{title}</h4>
-			<img className={s.wrapperImg} src={img} alt="" />
+        <h4 className={s.wrapperTitle}>{title}</h4>
+        <img className={s.wrapperImg} src={img} alt='cloth' />
         <ul className={s.wrapperList}>
-          <li className={s.wrapperItemCard}><span>{t("basket.color")}: </span> {color}</li>
-          <li className={s.wrapperItemCard}><span>{t("basket.size")}: </span> {size}</li>
-          <li className={s.wrapperItemCard}><span>{t("basket.price")}: </span> ${price}</li>
-					<li>
+          <li className={s.wrapperItemCard}>
+            <span>{t('basket.color')}: </span> {color}
+          </li>
+          <li className={s.wrapperItemCard}>
+            <span>{t('basket.size')}: </span> {size}
+          </li>
+          <li className={s.wrapperItemCard}>
+            <span>{t('basket.price')}: </span> ${price}
+          </li>
+          <li>
             <button className={s.wrapperBtn} onClick={() => removeCart(id)}>
-              {t("basket.remove")}
+              {t('basket.remove')}
             </button>
           </li>
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
