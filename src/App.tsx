@@ -27,7 +27,6 @@ export const App = () => {
     fetchProducts()
   }, [dispatch])
 
-
   return (
     <Suspense fallback={'Loading...'}>
       <Routes>

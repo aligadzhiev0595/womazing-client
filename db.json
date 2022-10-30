@@ -318,30 +318,5 @@
       "priceSale": 350
     }
   ],
-  "cart": [
-    {
-      "id": 2,
-      "title": "Harley-Queen",
-      "image": {
-        "black": "Shop/hoody2-black.jpg",
-        "white": "Shop/hoody2-white.jpg"
-      },
-      "color": "black",
-      "size": "s",
-      "price": 300,
-      "category": "hoody"
-    },
-    {
-      "id": 3,
-      "title": "Anime",
-      "image": {
-        "black": "Shop/hoody3-black.jpg",
-        "white": "Shop/hoody3-white.jpg"
-      },
-      "color": "black",
-      "size": "s",
-      "price": 400,
-      "category": "hoody"
-    }
-  ]
+  "cart": []
 }
