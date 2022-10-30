@@ -29,7 +29,7 @@ export const CartCard = ({
     dispatch(removeProductCart(id))
   }
   return (
-    <div className='col col-4 col-sm-12'>
+    <div className='col col-4 col-md-6 col-sm-12'>
       <div className={s.wrapper}>
         <h4 className={s.wrapperTitle}>{title}</h4>
         <img className={s.wrapperImg} src={img} alt='cloth' />

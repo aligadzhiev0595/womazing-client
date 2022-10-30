@@ -12,6 +12,12 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    hydrate(
+      state: InitialStateProps,
+      action: PayloadAction<InitialStateProps>
+    ) {
+      return action.payload
+    },
     getProductCart(state: InitialStateProps, action: PayloadAction<ICart>) {
       state.cartData = [...state.cartData, action.payload]
     },
@@ -23,5 +29,5 @@ const cartSlice = createSlice({
   },
 })
 
-export const { getProductCart, removeProductCart } = cartSlice.actions
+export const { getProductCart, removeProductCart,hydrate } = cartSlice.actions
 export default cartSlice.reducer

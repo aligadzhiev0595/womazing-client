@@ -14,9 +14,7 @@ import { useAppDispatch } from './redux/redux.hooks'
 import { getAllProducts } from './redux/productsSlice'
 
 export const App = () => {
-
   const dispatch = useAppDispatch()
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -29,15 +27,6 @@ export const App = () => {
     fetchProducts()
   }, [dispatch])
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('cart') !== null) {
-  //     setCart(JSON.parse(localStorage.getItem('cart') || '{}'))
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   localStorage.setItem('cart', JSON.stringify(cart))
-  // }, [cart])
 
   return (
     <Suspense fallback={'Loading...'}>
