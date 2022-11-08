@@ -1,0 +1,47 @@
+.inner{
+  display: flex;
+  justify-content: end;
+}
+.selectTabs {
+  padding: 10px;
+  border: none;
+  display: none;
+  background-color: #6e9c9f;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  max-width: 150px;
+  width: 100%;
+}
+.innerBtn{
+  display: flex;
+  align-items: center;
+}
+.btnSort {
+  margin-left: 20px;
+  cursor: pointer;
+  border: 1px solid #6e9c9f;
+  background-color: transparent;
+  color: #6e9c9f;
+  max-width: 150px;
+  height: 40px;
+  transition: all 0.3s ease-in;
+  &.active,
+  &:hover {
+    background-color: #6e9c9f;
+    color: white;
+  }
+}
+
+@media (max-width: 1280px) {
+  .innerBtn{
+    display: none;
+  }
+  .selectTabs {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .inner{
+    justify-content: space-around;
+  }
+}
