@@ -1,17 +1,18 @@
-import { ShopCard } from '../../components'
+import { Pagination, ShopCard } from '../../components'
 import { Breadcrumbs } from '../../components'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import s from './Shop.module.scss'
 import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
-import { getSorting, getStatus } from '../../redux/productsSlice'
+import { getSorting, getStatus, getPage } from '../../redux/productsSlice'
 
 export const Shop = () => {
   const { t } = useTranslation()
   const products = useAppSelector((s) => s.products.productsData)
   const status = useAppSelector((s) => s.products.status)
   const sorting = useAppSelector((s) => s.products.sorting)
+  const page = useAppSelector((s) => s.products.pageNumber)
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
 
@@ -29,7 +30,7 @@ export const Shop = () => {
               className={[s.tabsItem, status === 'all' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => dispatch(getStatus('all'))}
+              onClick={() => dispatch(getStatus('all')) && dispatch(getPage(1))}
             >
               {t('shop.all')}
             </li>
@@ -38,7 +39,9 @@ export const Shop = () => {
                 s.tabsItem,
                 status === 'sportsuit' ? s.active : '',
               ].join(' ')}
-              onClick={() => dispatch(getStatus('sportsuit'))}
+              onClick={() =>
+                dispatch(getStatus('sportsuit')) && dispatch(getPage(1))
+              }
             >
               {t('shop.suit')}
             </li>
@@ -47,7 +50,9 @@ export const Shop = () => {
                 s.tabsItem,
                 status === 'sweatshirt' ? s.active : '',
               ].join(' ')}
-              onClick={() => dispatch(getStatus('sweatshirt'))}
+              onClick={() =>
+                dispatch(getStatus('sweatshirt')) && dispatch(getPage(1))
+              }
             >
               {t('shop.sweatshirt')}
             </li>
@@ -55,7 +60,9 @@ export const Shop = () => {
               className={[s.tabsItem, status === 'tshort' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => dispatch(getStatus('tshort'))}
+              onClick={() =>
+                dispatch(getStatus('tshort')) && dispatch(getPage(1))
+              }
             >
               {t('shop.tshort')}
             </li>
@@ -63,7 +70,9 @@ export const Shop = () => {
               className={[s.tabsItem, status === 'hoody' ? s.active : ''].join(
                 ' '
               )}
-              onClick={() => dispatch(getStatus('hoody'))}
+              onClick={() =>
+                dispatch(getStatus('hoody')) && dispatch(getPage(1))
+              }
             >
               {t('shop.hoody')}
             </li>
@@ -172,6 +181,9 @@ export const Shop = () => {
               .filter((item) =>
                 status === 'all' ? item : item.category === status
               )
+              .filter((item, idx) => {
+                return idx + 1 <= page * 6 && idx >= page * 6 - 6
+              })
               .map((el: any) => (
                 <ShopCard
                   img={`../${el.image[Object.keys(el.image)[0]]}`}
@@ -180,6 +192,7 @@ export const Shop = () => {
                 />
               ))}
           </div>
+          <Pagination />
         </div>
       </section>
     </main>

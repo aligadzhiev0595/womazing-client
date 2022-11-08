@@ -8,4 +8,5 @@ export { Hero } from './Hero/Hero'
 export { ShopCard } from './ShopCard/ShopCard'
 export { Team } from './Team/Team'
 export { TeamSlider } from './Team/TeamSlider'
+export { Pagination } from './Pagination/Pagination'
 
