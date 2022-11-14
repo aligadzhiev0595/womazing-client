@@ -1,17 +1,22 @@
-import { Link } from "react-router-dom";
+import { ReactElement } from 'react'
+import { Link } from 'react-router-dom'
 
 import s from './Collection.module.scss'
 
-interface CollectionCardProps{
-  img:string
-  title:string
-  through:any
+interface CollectionCardProps {
+  img: string
+  title: string
+  through: ReactElement
 }
 
-export const CollectionCard = ({ img, title, through }:CollectionCardProps) => {
+export const CollectionCard = ({
+  img,
+  title,
+  through,
+}: CollectionCardProps) => {
   return (
     <>
-      <div className="col col-4 col-md-12">
+      <div className='col col-4 col-md-12'>
         <div className={s.wrapper}>
           <Link to={`/shop`} className={s.cardLink}>
             <img className={s.img} src={img} alt={title} />
@@ -24,5 +29,5 @@ export const CollectionCard = ({ img, title, through }:CollectionCardProps) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

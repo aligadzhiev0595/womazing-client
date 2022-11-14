@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
+import { useAppDispatch } from '../../redux/redux.hooks'
+import { removeProductCart } from '../../redux/cartSlice'
 import axios from 'axios'
 
 import s from './CartCard.module.scss'
-import { useAppDispatch } from '../../redux/redux.hooks'
-import { removeProductCart } from '../../redux/cartSlice'
 
 interface CartCardProps {
   img: string

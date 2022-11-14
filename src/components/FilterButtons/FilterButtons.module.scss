@@ -1,0 +1,51 @@
+.tabsBar {
+  display: flex;
+  column-gap: 15px;
+  justify-content: flex-end;
+}
+.tabsItem {
+  padding: 19px 63px;
+  border: 1px solid #000000;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  cursor: pointer;
+  margin: 0 0 22px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover,
+  &.active {
+    background-color: black;
+    color: white;
+  }
+}
+.innerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.btnSort {
+  margin-left: 20px;
+  cursor: pointer;
+  border: 1px solid #6e9c9f;
+  background-color: transparent;
+  color: #6e9c9f;
+  max-width: 150px;
+  height: 40px;
+  transition: all 0.3s ease-in;
+  &.active,
+  &:hover {
+    background-color: #6e9c9f;
+    color: white;
+  }
+}
+
+@media (max-width: 1280px) {
+  .innerBtn {
+    display: none;
+  }
+  .tabsBar {
+    display: none;
+  }
+}

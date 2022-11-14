@@ -1,5 +1,5 @@
 .title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 44px;
@@ -28,7 +28,7 @@
   margin: 0 5px;
 }
 .choose {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -80,7 +80,7 @@
   &.active {
     position: relative;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -10px;
       width: 40px;
@@ -110,13 +110,5 @@
   }
   .wrapperStock {
     text-align: center;
-  }
-  .chooseColorItem {
-    height: 30px;
-    &.active {
-      &::before {
-        width: 29px;
-      }
-    }
   }
 }

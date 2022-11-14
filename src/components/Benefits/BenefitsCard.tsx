@@ -1,5 +1,4 @@
-import s from "./Benefits.module.scss";
-
+import s from './Benefits.module.scss'
 
 interface BenefitsCardProp {
   img: string
@@ -10,13 +9,13 @@ interface BenefitsCardProp {
 export const BenefitsCard = ({ img, title, desc }: BenefitsCardProp) => {
   return (
     <>
-      <div className="col col-4 col-md-12">
+      <div className='col col-4 col-md-12'>
         <div className={s.wrapperCard}>
           <img src={img} alt={title} />
-          <h6 className={s.titleCard} >{title}</h6>
-          <p className={s.descCard} >{desc}</p>
+          <h6 className={s.titleCard}>{title}</h6>
+          <p className={s.descCard}>{desc}</p>
         </div>
       </div>
     </>
-  );
-};
+  )
+}

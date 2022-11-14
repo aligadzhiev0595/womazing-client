@@ -2,14 +2,14 @@ import { Breadcrumbs } from '../../components'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useParams } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
+import { getColor, getSize } from '../../redux/productsSlice'
+import { getProductCart } from '../../redux/cartSlice'
+import { IProducts } from '../../interfaces/IProducts'
+import { ICart } from '../../interfaces/ICart'
 import axios from 'axios'
 
 import s from './ItemProduct.module.scss'
-import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
-import { getColor, getSize } from '../../redux/productsSlice'
-import { IProducts } from '../../interfaces/IProducts'
-import { getProductCart } from '../../redux/cartSlice'
-import { ICart } from '../../interfaces/ICart'
 
 export const ItemProduct = () => {
   const params = useParams()

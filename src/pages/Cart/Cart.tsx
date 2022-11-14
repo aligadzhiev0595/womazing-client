@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
-
-import s from './Cart.module.scss'
 import { CartCard } from '../../components'
 import { Breadcrumbs } from '../../components'
 import { useLocation } from 'react-router-dom'
 import { useAppSelector } from '../../redux/redux.hooks'
+
+import s from './Cart.module.scss'
 
 export const Cart = () => {
   const cartData = useAppSelector((s) => s.cart.cartData)

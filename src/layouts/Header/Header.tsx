@@ -3,8 +3,8 @@ import { Link, useLocation, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BsHandbag } from 'react-icons/bs'
 
-import logo from '../../assets/icons/logo.svg'
 import s from './Header.module.scss'
+import logo from '../../assets/icons/logo.svg'
 
 export const Header = () => {
   const [burger, setBurger] = useState(false)

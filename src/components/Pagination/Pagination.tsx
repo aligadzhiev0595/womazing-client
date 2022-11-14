@@ -1,5 +1,6 @@
 import { getPage } from '../../redux/productsSlice'
 import { useAppDispatch, useAppSelector } from '../../redux/redux.hooks'
+
 import s from './Pagination.module.scss'
 
 export const Pagination = () => {

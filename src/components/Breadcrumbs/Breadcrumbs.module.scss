@@ -3,18 +3,18 @@
   display: flex;
   column-gap: 13px;
 
-	.itemLink {
-		color: var(--secondary-color);
-		font-family: "Raleway";
-		font-style: normal;
-		font-weight: 400;
-		font-size: 15px;
-		letter-spacing: 0.02em;
-		margin-bottom: 10px;
-	}
-	.active {
-		color: var(--primary-color);
-	}
+  .itemLink {
+    color: var(--secondary-color);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  .active {
+    color: var(--primary-color);
+  }
 }
 
 @media (max-width: 1024px) {

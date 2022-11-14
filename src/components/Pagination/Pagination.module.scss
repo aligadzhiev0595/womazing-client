@@ -8,35 +8,34 @@
   border: 1px solid var(--primary-color);
   display: flex;
   align-items: center;
-	justify-content: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
-	cursor: pointer;
-	color: var(--primary-color);
-	&.active,
+  cursor: pointer;
+  color: var(--primary-color);
+  &.active,
   &:hover {
     background-color: #6e9c9f;
     color: #fff;
   }
 }
-.btnPrev{
-  &::before{
-    content: "←";
+.btnPrev {
+  &::before {
+    content: '←';
     font-size: 24px;
     color: #000;
   }
 }
-.btnNext{
-  &::before{
-    content: "→";
+.btnNext {
+  &::before {
+    content: '→';
     font-size: 24px;
     color: #000;
   }
 }
-
 
 @media (max-width: 1024px) {
- .pagination{
-  margin-top: 40px;
- }
+  .pagination {
+    margin-top: 40px;
+  }
 }

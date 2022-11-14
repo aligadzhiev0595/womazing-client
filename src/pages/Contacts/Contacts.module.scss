@@ -1,5 +1,5 @@
 .title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 44px;
@@ -17,7 +17,7 @@
   margin-top: 120px;
 }
 .wrapperFormTitle {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -83,22 +83,22 @@
   .wrapperText {
     flex-wrap: wrap;
   }
-	.wrapperTitle{
-		text-align: center;
-	}
-	.wrapperInfo{
-		margin-bottom: 20px;
-	}
-  .form{
- margin: 0 auto;
+  .wrapperTitle {
+    text-align: center;
   }
-.wrapperFormTitle{
-	text-align: center;
-}
-.formInput{
-	width: 100%;
-}
-.formBtn{
-  margin: 0 auto;
-}
+  .wrapperInfo {
+    margin-bottom: 20px;
+  }
+  .form {
+    margin: 0 auto;
+  }
+  .wrapperFormTitle {
+    text-align: center;
+  }
+  .formInput {
+    width: 100%;
+  }
+  .formBtn {
+    margin: 0 auto;
+  }
 }

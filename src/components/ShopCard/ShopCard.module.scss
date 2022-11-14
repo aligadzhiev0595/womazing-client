@@ -7,12 +7,12 @@
 .cardImg {
   width: 100%;
 }
-.inStock{
+.inStock {
   text-align: center;
   margin-top: 10px;
 }
 .titleCard {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -23,7 +23,7 @@
   margin-top: 15px;
 }
 .priceCard {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -39,7 +39,7 @@
   transition: all 1s ease-out;
   &:hover::before {
     z-index: 1;
-    content: "→";
+    content: '→';
     position: absolute;
     top: 0;
     left: 0;

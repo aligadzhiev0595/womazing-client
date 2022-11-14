@@ -1,5 +1,5 @@
 .title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
   font-size: 44px;
@@ -9,40 +9,8 @@
   margin-bottom: 15px;
 }
 
-.tabsBar {
-  display: flex;
-  column-gap: 15px;
-  justify-content: flex-end;
-}
-.tabsItem {
-  padding: 19px 63px;
-  border: 1px solid #000000;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  color: #000000;
-  cursor: pointer;
-  margin: 0 0 22px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  &:hover,
-  &.active {
-    background-color: black;
-    color: white;
-  }
-}
-
-
-@media (max-width: 1280px) {
-  .tabsBar {
-    display: none;
-  }
-}
 @media (max-width: 1024px) {
   .title {
-    text-align: center;
-  }
-  .countItems{
     text-align: center;
   }
 }
