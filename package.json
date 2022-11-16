@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server --watch db.json --port 8080",
+    "server": "json-server --watch db.json --port 8080 --middlewares ./range.js",
     "dev": "concurrently \"yarn start\" \"yarn server\"",
     "build": "react-scripts build"
   },
