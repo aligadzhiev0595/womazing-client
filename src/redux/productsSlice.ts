@@ -44,13 +44,19 @@ const productsSlice = createSlice({
     getSorting(state: InitialStateProps, action: PayloadAction<string>) {
       state.sorting = action.payload
     },
-    getPage(state: InitialStateProps, action: PayloadAction<number>){
+    getPage(state: InitialStateProps, action: PayloadAction<number>) {
       state.pageNumber = action.payload
-    }
+    },
   },
 })
 
-export const { getAllProducts, getStatus, getSize, getColor, getSorting ,getPage} =
-  productsSlice.actions
+export const {
+  getAllProducts,
+  getStatus,
+  getSize,
+  getColor,
+  getSorting,
+  getPage,
+} = productsSlice.actions
 
 export default productsSlice.reducer

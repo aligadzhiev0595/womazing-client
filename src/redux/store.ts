@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import cartSlice,{ hydrate as cartHydrate }  from './cartSlice'
+import cartSlice, { hydrate as cartHydrate } from './cartSlice'
 import productsSlice from './productsSlice'
 
 const store = configureStore({
   reducer: {
     products: productsSlice,
-    cart: cartSlice
+    cart: cartSlice,
   },
 })
 
@@ -14,15 +14,12 @@ export default store
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 
-
 const cartLS = loadFromLocalStorage('cart')
 if (cartLS) store.dispatch(cartHydrate(cartLS))
-
 
 store.subscribe(() => {
   saveToLocalStorage(store.getState().cart, 'cart')
 })
-
 
 function saveToLocalStorage(state: any, name: string) {
   try {

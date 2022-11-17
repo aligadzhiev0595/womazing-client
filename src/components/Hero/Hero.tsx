@@ -15,7 +15,7 @@ export const Hero = () => {
             <div className={s.wrapperLeft}>
               <h1 dangerouslySetInnerHTML={{ __html: t('home.title') }} />
               <p dangerouslySetInnerHTML={{ __html: t('home.desc') }} />
-              <Link to={`/shop`}>
+              <Link to={'/shop'}>
                 <div className={s.btns}>
                   <button className={s.btnF}>
                     <BsArrowDown />

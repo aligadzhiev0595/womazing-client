@@ -9,7 +9,7 @@ import logo from '../../assets/icons/logo.svg'
 export const Header = () => {
   const [burger, setBurger] = useState(false)
   const { t, i18n } = useTranslation()
-  let { pathname } = useLocation()
+  const { pathname } = useLocation()
 
   const changeLanguage = (lang: any) => {
     i18n.changeLanguage(lang)
@@ -32,7 +32,7 @@ export const Header = () => {
     <header className={s.header}>
       <div className='container'>
         {/* NAVIGATION START */}
-        <nav className={` d-flex j-between a-center`}>
+        <nav className={'d-flex j-between a-center'}>
           <ul className={`${s.navLogo} d-flex a-center`}>
             <li className={s.item}>
               <Link to='/'>
@@ -80,7 +80,7 @@ export const Header = () => {
             </li>
           </ul>
 
-          <ul className={`d-flex a-center`}>
+          <ul className={'d-flex a-center'}>
             <li className={s.item}>
               <button
                 className={[

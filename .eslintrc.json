@@ -1,0 +1,24 @@
+{
+  "plugins": ["@typescript-eslint", "prettier", "react"],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
+    "quotes": [1, "single"],
+    "semi": [1, "never"],
+    "jsx-quotes": [2, "prefer-single"],
+    "prefer-const": 2,
+    "no-var": 1,
+    "@typescript-eslint/no-unused-vars": [1],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"]
+    }
+  ]
+}

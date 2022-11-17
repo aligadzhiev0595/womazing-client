@@ -43,11 +43,11 @@ export const ShopCard = ({
         </p>
         {inStock ? (
           <p className={s.inStock}>
-            {t(`shop.est`)}
-            <span>{inStock}</span> <span>{t(`shop.par`)}</span>
+            {t('shop.est')}
+            <span>{inStock}</span> <span>{t('shop.par')}</span>
           </p>
         ) : (
-          <p className={s.inStock}>{t(`shop.noScock`)}</p>
+          <p className={s.inStock}>{t('shop.noScock')}</p>
         )}
       </div>
     </div>

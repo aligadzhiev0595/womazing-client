@@ -18,7 +18,7 @@ export const CollectionCard = ({
     <>
       <div className='col col-4 col-md-12'>
         <div className={s.wrapper}>
-          <Link to={`/shop`} className={s.cardLink}>
+          <Link to={'/shop'} className={s.cardLink}>
             <img className={s.img} src={img} alt={title} />
           </Link>
           <p className={s.desc}>{title}</p>

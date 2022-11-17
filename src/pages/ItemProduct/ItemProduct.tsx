@@ -36,12 +36,13 @@ export const ItemProduct = () => {
       }
     }
     fetchProduct()
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onAddToCart = async (obj: ICart) => {
-    const { data } = await axios.post('https://womazing-e-commerce.herokuapp.com/api/cart/', obj)
+    const { data } = await axios.post(
+      'https://womazing-e-commerce.herokuapp.com/api/cart/',
+      obj
+    )
     // const { data } = await axios.post('http://localhost:8080/cart/', obj)
     dispatch(getProductCart(data))
   }

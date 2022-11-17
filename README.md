@@ -45,7 +45,6 @@ womazing-e-commerce/
 │ ├─ @types/react-dom: 18.0.0
 │ ├─ @typescript-eslint/eslint-plugin: ^5.36.1
 │ ├─ @typescript-eslint/parser: ^5.36.1
-│ ├─ @typescript-eslint/eslint-plugin: ^5.36.1
 │ ├─ macro-styles: 1.0.0
 │ ├─ react-redux: 8.0.2
 │ ├─ sass: ^1.54.8
@@ -59,7 +58,6 @@ womazing-e-commerce/
 │ ├─ react-input-mask: ^2.0.4
 │ ├─ swiper: 8.22.0
 │ ├─ eslint: 8.22.0
-│ ├─ eslint-config-next: 12.2.5
 │ ├─ eslint-config-prettier: ^8.5.0
 │ ├─ eslint-plugin-prettier: ^4.2.1
 │ ├─ eslint-plugin-react-hooks: ^4.6.0

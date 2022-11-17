@@ -87,7 +87,7 @@ export const Contacts = () => {
                     placeholder={t('contacts.form.eMail')}
                   />
                   <InputMask
-                    mask={`+\\7\\(999)99-99-99`}
+                    mask={'+\\7\\(999)99-99-99'}
                     type='tel'
                     id='tel'
                     className={s.formInput}

@@ -11,7 +11,7 @@ interface BreadProps {
 export const Breadcrumbs = ({ pathname, params, product }: BreadProps) => {
   const { t } = useTranslation()
 
-  let pathName =
+  const pathName =
     pathname === '/shop'
       ? t('shop.about.link2')
       : pathname === '/contacts'
