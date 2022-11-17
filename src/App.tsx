@@ -18,7 +18,7 @@ export const App = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get('https://vercel-backend-two.vercel.app/api/shop/')
+        const { data } = await axios.get('http://localhost:8080/shop/')
         dispatch(getAllProducts(data))
       } catch (error) {
         console.log(error)
