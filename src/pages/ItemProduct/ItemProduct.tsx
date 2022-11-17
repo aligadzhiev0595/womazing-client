@@ -25,7 +25,7 @@ export const ItemProduct = () => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/shop/${params.id}`
+          `https://vercel-backend-two.vercel.app/shop/${params.id}`
         )
         setProduct(data)
         dispatch(getColor(data.colors[0]))
@@ -38,7 +38,7 @@ export const ItemProduct = () => {
   }, [])
 
   const onAddToCart = async (obj: ICart) => {
-    const { data } = await axios.post('http://localhost:8080/cart/', obj)
+    const { data } = await axios.post('https://vercel-backend-two.vercel.app/cart/', obj)
     dispatch(getProductCart(data))
   }
 
