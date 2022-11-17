@@ -25,7 +25,8 @@ export const CartCard = ({
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const removeCart = (id: number) => {
-    axios.delete(`http://localhost:8080/cart/${id}`)
+    axios.delete(`https://womazing-e-commerce.herokuapp.com/api/cart/${id}`)
+    // axios.delete(`http://localhost:8080/cart/${id}`)
     dispatch(removeProductCart(id))
   }
   return (

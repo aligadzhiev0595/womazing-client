@@ -12,9 +12,10 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "client": "react-scripts start",
     "server": "json-server --watch db.json --port 8080",
-    "dev": "concurrently \"yarn start\" \"yarn server\"",
+    "dev": "concurrently \"yarn client\" \"yarn server\"",
     "build": "react-scripts build"
   },
   "eslintConfig": {
