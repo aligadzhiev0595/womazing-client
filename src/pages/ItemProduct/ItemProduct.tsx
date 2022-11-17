@@ -25,8 +25,7 @@ export const ItemProduct = () => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `https://womazing-e-commerce.herokuapp.com/api/shop/${params.id}`
-          // `http://localhost:8080/shop/${params.id}`
+          `http://localhost:8080/shop/${params.id}`
         )
         setProduct(data)
         dispatch(getColor(data.colors[0]))
@@ -39,11 +38,7 @@ export const ItemProduct = () => {
   }, [])
 
   const onAddToCart = async (obj: ICart) => {
-    const { data } = await axios.post(
-      'https://womazing-e-commerce.herokuapp.com/api/cart/',
-      obj
-    )
-    // const { data } = await axios.post('http://localhost:8080/cart/', obj)
+    const { data } = await axios.post('http://localhost:8080/cart/', obj)
     dispatch(getProductCart(data))
   }
 

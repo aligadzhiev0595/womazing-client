@@ -18,10 +18,7 @@ export const App = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // const { data } = await axios.get('http://localhost:8080/shop/')
-        const { data } = await axios.get(
-          'https://womazing-e-commerce.herokuapp.com/api/shop/'
-        )
+        const { data } = await axios.get('http://localhost:8080/shop/')
         dispatch(getAllProducts(data))
       } catch (error) {
         console.log(error)
