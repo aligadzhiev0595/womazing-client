@@ -10,18 +10,8 @@
         "white": "Shop/hoody1-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl",
-        "xxl",
-        "xs"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl", "xxl", "xs"],
+      "colors": ["black", "white"],
       "inStock": 15
     },
     {
@@ -34,15 +24,8 @@
         "white": "Shop/hoody2-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 21
     },
     {
@@ -55,16 +38,8 @@
         "white": "Shop/hoody3-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 23
     },
     {
@@ -76,15 +51,8 @@
         "white": "Shop/hoody4-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 25,
       "priceSale": ""
     },
@@ -97,16 +65,8 @@
         "white": "Shop/hoody5-white.jpg"
       },
       "category": "hoody",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 10
     },
     {
@@ -118,15 +78,8 @@
         "white": "Shop/sportsuit1-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 33,
       "priceSale": 0
     },
@@ -139,16 +92,8 @@
         "white": "Shop/sportsuit2-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 12
     },
     {
@@ -160,16 +105,8 @@
         "white": "Shop/sportsuit5-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 19
     },
     {
@@ -181,16 +118,8 @@
         "white": "Shop/sportsuit4-white.jpg"
       },
       "category": "sportsuit",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 4
     },
     {
@@ -202,16 +131,8 @@
         "white": "Shop/sweatshirt5-white.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 45
     },
     {
@@ -223,16 +144,8 @@
         "white": "Shop/sweatshirt3-white.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 88
     },
     {
@@ -244,16 +157,8 @@
         "white": "Shop/sweatshirt2-white.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "l", "xl"],
+      "colors": ["black", "white"],
       "inStock": 43
     },
     {
@@ -265,15 +170,8 @@
         "white": "Shop/sweatshirt1-white.jpg"
       },
       "category": "sweatshirt",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 52
     },
     {
@@ -285,15 +183,8 @@
         "white": "Shop/tshort1-white.jpg"
       },
       "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 27
     },
     {
@@ -305,15 +196,8 @@
         "white": "Shop/tshort3-white.jpg"
       },
       "category": "tshort",
-      "size": [
-        "s",
-        "m",
-        "xl"
-      ],
-      "colors": [
-        "black",
-        "white"
-      ],
+      "size": ["s", "m", "xl"],
+      "colors": ["black", "white"],
       "inStock": 20,
       "priceSale": 350
     }
