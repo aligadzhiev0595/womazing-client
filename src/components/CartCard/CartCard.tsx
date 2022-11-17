@@ -25,7 +25,7 @@ export const CartCard = ({
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const removeCart = (id: number) => {
-    axios.delete(`https://vercel-backend-two.vercel.app/cart/${id}`)
+    axios.delete(`https://vercel-backend-two.vercel.app/api/cart/${id}`)
     dispatch(removeProductCart(id))
   }
   return (
