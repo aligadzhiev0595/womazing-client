@@ -25,7 +25,7 @@ export const CartCard = ({
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const removeCart = (_id: number) => {
-    axios.delete(`http://localhost:8080/api/cart/${_id}`)
+    axios.delete(`https://womazing-backend.vercel.app/api/cart/${_id}`)
     dispatch(removeProductCart(_id))
   }
   return (
