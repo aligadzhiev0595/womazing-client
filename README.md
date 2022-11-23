@@ -3,9 +3,9 @@
 ## Build
 
 ```bash
-git clone https://github.com/aligadzhiev0595/womazing-e-commerce.git
-cd womazing-e-commerce - $ yarn install || npm i
-build script - $ yarn dev || npm run dev
+git clone https://github.com/aligadzhiev0595/womazing-client.git
+cd womazing-client - $ yarn install || npm i
+build script - $ yarn start || npm run start
 ```
 
 ## Project layout
