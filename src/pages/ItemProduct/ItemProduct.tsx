@@ -38,7 +38,7 @@ export const ItemProduct = () => {
   }, [])
 
   const onAddToCart = async (obj: ICart) => {
-    const { data } = await axios.post('http://localhost:8080/api/cart/add', obj)
+    const { data } = await axios.post('http://localhost:8080/api/cart', obj)
     dispatch(getProductCart(data))
   }
 

@@ -25,7 +25,7 @@ export const CartCard = ({
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const removeCart = (_id: number) => {
-    axios.post('http://localhost:8080/api/cart/remove', { _id })
+    axios.delete(`http://localhost:8080/api/cart/${_id}`)
     dispatch(removeProductCart(_id))
   }
   return (
