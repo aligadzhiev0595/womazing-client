@@ -25,7 +25,7 @@ export const Cart = () => {
           <div className='row'>
             {cartData.length > 0 ? (
               cartData.map((el) => (
-                <CartCard img={`../${el.image[color]}`} {...el} key={el.id} />
+                <CartCard img={`../${el.image[color]}`} {...el} key={el._id} />
               ))
             ) : (
               <div className='col col-12'>

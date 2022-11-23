@@ -1,6 +1,6 @@
 export interface IProducts {
   category: string
-  id: number
+  _id: number
   title: string
   price: number
   priceSale: number

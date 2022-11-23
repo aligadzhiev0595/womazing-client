@@ -56,7 +56,7 @@ export const Shop = () => {
                 <ShopCard
                   img={`../${el.image[Object.keys(el.image)[0]]}`}
                   {...el}
-                  key={el.id}
+                  key={el._id}
                 />
               ))}
           </div>

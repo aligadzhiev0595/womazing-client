@@ -1,6 +1,6 @@
 export interface ICart {
   category: string
-  id: number
+  _id: number
   title: string
   price: number
   color: string

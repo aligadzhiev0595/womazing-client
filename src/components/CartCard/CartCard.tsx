@@ -11,7 +11,7 @@ interface CartCardProps {
   color: string
   size: string
   price: number
-  id: number
+  _id: number
 }
 
 export const CartCard = ({
@@ -20,13 +20,13 @@ export const CartCard = ({
   color,
   size,
   price,
-  id,
+  _id,
 }: CartCardProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const removeCart = (id: number) => {
-    axios.delete(`http://localhost:8080/cart/${id}`)
-    dispatch(removeProductCart(id))
+  const removeCart = (_id: number) => {
+    axios.post('http://localhost:8080/api/cart/remove', { _id })
+    dispatch(removeProductCart(_id))
   }
   return (
     <div className='col col-4 col-md-6 col-sm-12'>
@@ -44,7 +44,7 @@ export const CartCard = ({
             <span>{t('basket.price')}: </span> ${price}
           </li>
           <li>
-            <button className={s.wrapperBtn} onClick={() => removeCart(id)}>
+            <button className={s.wrapperBtn} onClick={() => removeCart(_id)}>
               {t('basket.remove')}
             </button>
           </li>

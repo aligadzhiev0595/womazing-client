@@ -12,9 +12,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "client": "react-scripts start",
-    "server": "json-server --watch db.json --port 8080",
-    "dev": "concurrently \"yarn client\" \"yarn server\"",
+    "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "eslintConfig": {
@@ -41,7 +39,6 @@
     "@types/react-input-mask": "^3.0.1",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
-    "concurrently": "^7.4.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -49,7 +46,6 @@
     "i18next": "^22.0.1",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-http-backend": "^1.4.4",
-    "json-server": "^0.17.0",
     "macro-styles": "^1.0.5",
     "prettier": "^2.7.1",
     "react-i18next": "^11.18.6",

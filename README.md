@@ -24,7 +24,8 @@ womazing-e-commerce/
 │ ├─ i18n.js                 Internationalization-framework
 │ ├─ App.tsx                 Root React component
 │ └─ index.tsx               React app entrypoint
-├─ db.json                   DataBase
+├─ .prettierrc               Prettier config
+├─ .eslintrc                 Eslint config
 ├─ declaration.ts            Type declaration file
 └─ package.json              NPM dependencies
 ```
@@ -38,7 +39,6 @@ womazing-e-commerce/
 │ ├─ react-dom: ^18.2.0
 │ ├─ react-scripts: 5.0.1
 │ ├─ react-router-dom: ^6.4.2
-│ ├─ concurrently: ^7.4.0
 │ ├─ @reduxjs/toolkit: 1.8.3
 │ ├─ @types/node: 16.7.13
 │ ├─ @types/react: 18.0.0
@@ -53,7 +53,6 @@ womazing-e-commerce/
 │ ├─ i18next-browser-languagedetector: ^6.1.8
 │ ├─ i18next-http-backend: ^1.4.4
 │ ├─ react-i18next: ^11.18.6
-│ ├─ json-server: 0.17.0
 │ ├─ macro-styles: ^1.0.5
 │ ├─ react-input-mask: ^2.0.4
 │ ├─ swiper: 8.22.0

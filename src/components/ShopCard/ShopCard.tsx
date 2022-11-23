@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import s from './ShopCard.module.scss'
 
 interface ShopCardProps {
-  id: number
+  _id: number
   title: string
   img: string
   price: number
@@ -14,7 +14,7 @@ interface ShopCardProps {
 }
 
 export const ShopCard = ({
-  id,
+  _id,
   title,
   img,
   price,
@@ -26,7 +26,7 @@ export const ShopCard = ({
   return (
     <div className='col col-4 col-md-6'>
       <div className={s.card}>
-        <Link className={s.cardLink} to={`/shop/${id}`}>
+        <Link className={s.cardLink} to={`/shop/${_id}`}>
           <img className={s.cardImg} src={img} alt='' />
         </Link>
         <h3 className={s.titleCard}>{title}</h3>
